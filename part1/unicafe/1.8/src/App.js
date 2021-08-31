@@ -39,7 +39,7 @@ const App = () => {
     const [bad, setBad] = useState(0)
     const all = good + neutral + bad
     const avg = (good - bad) / all
-    const pos = good / all
+    const pos = (good / all) * 100
 
     const addGood = () => {
         setGood(good + 1)

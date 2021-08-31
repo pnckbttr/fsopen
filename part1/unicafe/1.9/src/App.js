@@ -21,15 +21,15 @@ const Statistics = (props) => {
     return (
     <div>
         good {props.good}
-        <br></br>
+        <br/>
         neutral {props.neutral}
-        <br></br>
+        <br/>
         bad {props.bad}
-        <br></br>
+        <br/>
         all {props.all}
-        <br></br>
+        <br/>
         average {props.avg}
-        <br></br>
+        <br/>
         positive {props.pos} %
 
     </div>

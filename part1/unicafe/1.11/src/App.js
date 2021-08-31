@@ -12,26 +12,34 @@ const Button = (props) => (
     </button>
 )
 
-const Statistics = (props) => {
+const StatisticLine = (props) => {
+    return (
+        <tr>
+            <td>{props.text}</td>
+            <td>{props.value} {props.extra}</td>
+        </tr>
+    )
+}
 
-    
+const Statistics = (props) => {
+    if (isNaN(props.avg)) {
+        return (
+            <div>No feedback given</div>
+        )
+    }
     return (
     <div>
-        good {props.good}
-        <br/>
-        neutral {props.neutral}
-        <br/>
-        bad {props.bad}
-        <br/>
-        all {props.all}
-        <br/>
-        average {props.avg}
-        <br/>
-        positive {props.pos} %
-
+        <StatisticLine text='good' value={props.good}/> 
+        <StatisticLine text='neutral' value={props.neutral}/>
+        <StatisticLine text='bad' value={props.bad}/>
+        <StatisticLine text='all' value={props.all}/>
+        <StatisticLine text='avg' value={props.avg}/>
+        <StatisticLine text='positive' value={props.pos} extra='%'/>
     </div>
     )
 }
+
+
 
 const App = () => {
 
