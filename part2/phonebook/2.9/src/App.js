@@ -19,8 +19,6 @@ const App = () => {
 
   const [foundPerson, setFoundPerson] = useState(false)
 
-  const [foundIndex, setFoundIndex] = useState()
-
   const [found, setFound] = useState('')
 
   const shownPersons = foundPerson
@@ -64,7 +62,6 @@ const App = () => {
       setFound(persons[lowerCaseNames.indexOf(event.target.value)])     
     } else {
       setFoundPerson(false)
-      setFoundIndex(undefined)
       setFound('')
         }
       }
